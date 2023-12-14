@@ -36,15 +36,72 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [ 
             SizedBox(
+              width: 400,
+              height: 100,
               child: ListView.separated(
-                itemBuilder: (context, index){},
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index){
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    width: 100,
+                    height: 60,
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const SizedBox(),
+                          Text(
+                            personsinfo[index].name,
+                            style: const TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black87,
+                            ),
+                            ),
+                          Text(
+                            personsinfo[index].fname,
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromARGB(255, 51, 50, 50),
+                            ),
+                          ),
+                          Text(
+                            "Age: ${personsinfo[index].age} years",
+                            style: const TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400,
+                              color:  Color.fromARGB(31, 58, 56, 56),
+                            ),
+                          ),
+                        ]),  
+                    )
+                  );
+                },
                 separatorBuilder: (context, index) => const SizedBox(width: 20),
-                itemCount: items.length),
+                itemCount: personsinfo.length),
             ),
-            SizedBox( 
-              width: 50,
-              height: 50,),
+            const SizedBox( 
+              width: 200,
+              height: 900,),
             SizedBox(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemBuilder: (context, index){
+                  return Card(
+                    child: ListTile(
+                      contentPadding: const  EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                      title: Text(
+                        items[index].lname,
+                        style: const TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue,
+                        ),
+                      ),),
+                  );} , 
+                itemCount: items.length),
             )
           ]),
       ),
