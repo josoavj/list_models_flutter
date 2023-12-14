@@ -21,8 +21,7 @@ class HomePage extends StatelessWidget {
           ),),
         centerTitle: true,),
       body: Container(
-        
-
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       ),
     );
   }
