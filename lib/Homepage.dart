@@ -15,15 +15,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: const Text(
         "Items", 
         style: TextStyle(
-          color: Colors.blueAccent,
+          color: Colors.white,
           fontSize: 20,
           fontWeight: FontWeight.w500,
           ),),
-        centerTitle: true,),
+        centerTitle: true,
+        backgroundColor: Colors.blueAccent,
+        elevation:1,
+        leading: const Icon(Icons.ac_unit_rounded, size: 5, color: Colors.white,),
+        ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       ),
     );
   }
-  
 }

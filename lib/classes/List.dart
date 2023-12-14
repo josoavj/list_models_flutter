@@ -1,35 +1,24 @@
 class Liste{
   String lname;
-  String section;
   int element;
   Liste({
     required this.lname,
     required this.element, 
-    required this.section, 
   });
 
   static List<Liste> getListe(){
     List<Liste> items = [];
-    items.add(Liste(lname: "",  element: 22, section: ''));
-    items.add(Liste(lname: "", element: 8, section: ''));
-    items.add(Liste(lname: "",  element: 9, section: ''));
-    items.add(Liste(lname: "", element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "", element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 1, section: ''));
-    items.add(Liste(lname: "",  element: 8, section: ''));
-    items.add(Liste(lname: "",  element: 11, section: ''));
-    items.add(Liste(lname: "",  element: 2, section: ''));
-    items.add(Liste(lname: "",  element: 22, section: ''));
-    items.add(Liste(lname: "",  element: 3, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
-    items.add(Liste(lname: "",  element: 0, section: ''));
+    items.add(Liste(lname: "Videogames",  element: 22, ));
+    items.add(Liste(lname: "Books", element: 123, ));
+    items.add(Liste(lname: "Anime",  element: 9,));
+    items.add(Liste(lname: "Movies", element: 0,));
+    items.add(Liste(lname: "PlayStation",  element: 0,));
+    items.add(Liste(lname: "Smartphones",  element: 0,));
+    items.add(Liste(lname: "Watch", element: 0,));
+    items.add(Liste(lname: "Licence",  element: 0,));
+    items.add(Liste(lname: "Software",  element: 0,));
+    items.add(Liste(lname: "Katana",  element: 0, ));
+    items.add(Liste(lname: "Outfits",  element: 0,));
     return items;
   }
 }
