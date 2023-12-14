@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:list_models/classes/List.dart';
 import 'package:list_models/classes/Persons.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
+  
+  List<Liste> items = [];
+  void getListe(){
+    items = Liste.getListe();
+  }
   List<Persons> personsinfo = [];
   void getPersons(){
     personsinfo = Persons.getPersons();
   }
-
+  
   @override
   Widget build(BuildContext context){
     getPersons();
+    getListe();
     return Scaffold(
       appBar: AppBar(title: const Text(
         "Items", 
@@ -26,6 +33,20 @@ class HomePage extends StatelessWidget {
         ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: Column(
+          children: [ 
+            SizedBox(
+              child: ListView.separated(
+                itemBuilder: (context, index){},
+                separatorBuilder: (context, index) => const SizedBox(width: 20),
+                itemCount: items.length),
+            ),
+            SizedBox( 
+              width: 50,
+              height: 50,),
+            SizedBox(
+            )
+          ]),
       ),
     );
   }
