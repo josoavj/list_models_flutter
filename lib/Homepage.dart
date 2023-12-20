@@ -47,6 +47,8 @@ class HomePage extends StatelessWidget {
   // ListPerson
   SizedBox scrollableListP() {
     return SizedBox(
+      width: 100,
+      height: 100,
             child: ListView.builder(
               scrollDirection: Axis.vertical,
               itemBuilder: (context, index){
