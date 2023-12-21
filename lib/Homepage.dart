@@ -35,17 +35,17 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           children: [ 
-            scrollableList(),
+            scrollableListItems(),
             const SizedBox( 
               width: 200,
               height: 900,),
-            scrollableListP()
+            scrollableListPerson()
           ]),
       ),
     );
   }
   // ListPerson
-  SizedBox scrollableListP() {
+  SizedBox scrollableListPerson() {
     return SizedBox(
       width: 100,
       height: 100,
@@ -68,7 +68,7 @@ class HomePage extends StatelessWidget {
           );
   }
   // List items
-  SizedBox scrollableList() {
+  SizedBox scrollableListItems() {
     return SizedBox(
             width: 400,
             height: 100,
