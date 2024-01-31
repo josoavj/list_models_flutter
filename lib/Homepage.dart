@@ -31,16 +31,15 @@ class HomePage extends StatelessWidget {
         elevation:1,
         leading: const Icon(Icons.ac_unit_rounded, size: 5, color: Colors.white,),
         ),
-      body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Column(
-          children: [ 
-            scrollableListItems(),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        children: [
+          scrollableListItems(),
             const SizedBox( 
               width: 200,
               height: 900,),
             scrollableListPerson()
-          ]),
+        ]
       ),
     );
   }
