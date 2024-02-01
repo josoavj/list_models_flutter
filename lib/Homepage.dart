@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:list_models/classes/List.dart';
 import 'package:list_models/classes/Persons.dart';
@@ -29,16 +30,33 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
         elevation:1,
-        leading: const Icon(Icons.ac_unit_rounded, size: 5, color: Colors.white,),
+        leading: GestureDetector(
+          onTap: (){
+          },
+          child: const Icon(CupertinoIcons.cube_box, size: 20, color: Colors.white,),
+        ),
         ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
         children: [
+          const Text(
+            "Persons",
+            style: TextStyle(
+              color: Color.fromARGB(176, 0, 0, 0),
+              fontSize: 20,
+            ),
+          ),
           scrollableListItems(),
-            const SizedBox( 
-              width: 200,
-              height: 900,),
-            scrollableListPerson()
+            const SizedBox(
+              height: 50,),
+          const Text(
+            "Sections",
+            style: TextStyle(
+              color: Color.fromARGB(162, 0, 0, 0),
+              fontSize: 20,
+            ),
+          ),
+          scrollableListPerson()
         ]
       ),
     );
@@ -47,7 +65,7 @@ class HomePage extends StatelessWidget {
   SizedBox scrollableListPerson() {
     return SizedBox(
       width: 100,
-      height: 100,
+      height: 600,
             child: ListView.builder(
               scrollDirection: Axis.vertical,
               itemBuilder: (context, index){
@@ -105,7 +123,7 @@ class HomePage extends StatelessWidget {
                           style: const TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w400,
-                            color:  Color.fromARGB(31, 58, 56, 56),
+                            color:  Color.fromARGB(166, 58, 56, 56),
                           ),
                         ),
                       ]),  
