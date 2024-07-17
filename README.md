@@ -1,7 +1,7 @@
 # About
 
 - **Info:** Exemple de liste de widget basique pour flutter
-- **Author:** [Josoa886](https://github.com/Josoa886)
+- **Author:** **[Josoa](https://github.com/josoavj)**
 
 ## Getting Started
 
